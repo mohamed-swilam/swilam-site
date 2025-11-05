@@ -34,25 +34,39 @@ export const Hero = () => {
         <div className="mb-8 animate-scale-in">
           <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-primary to-cyan-400 p-1">
             <div className="w-full h-full rounded-full bg-card flex items-center justify-center">
-              <span className="text-4xl font-bold text-gradient">JD</span>
+              <img
+                src="/profile.jpg"
+                alt="Mohamed Hamad"
+                className="w-full h-full object-cover rounded-full"
+              />
             </div>
           </div>
         </div>
 
         {/* Text Content */}
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 animate-slide-up">
-          <span className="text-gradient">John Doe</span>
+          <span className="text-gradient">Mohamed Hamad</span>
         </h1>
-        <h2 className="text-2xl md:text-3xl text-foreground/80 mb-6 animate-slide-up" style={{ animationDelay: "0.1s" }}>
-          Full Stack Developer & UI/UX Enthusiast
+        <h2
+          className="text-2xl md:text-3xl text-foreground/80 mb-6 animate-slide-up"
+          style={{ animationDelay: "0.1s" }}
+        >
+          Security-Focused Full Stack Developer
         </h2>
-        <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed animate-slide-up" style={{ animationDelay: "0.2s" }}>
-          Crafting beautiful, performant web applications with modern technologies.
-          Passionate about creating exceptional user experiences and writing clean, maintainable code.
+        <p
+          className="text-lg text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed animate-slide-up"
+          style={{ animationDelay: "0.2s" }}
+        >
+          Full-stack and security-focused engineer specializing in backend
+          development, penetration testing, and building reliable systems with
+          best-practice security and clean architecture.
         </p>
 
         {/* CTA Buttons */}
-        <div className="flex flex-wrap gap-4 justify-center animate-slide-up" style={{ animationDelay: "0.3s" }}>
+        <div
+          className="flex flex-wrap gap-4 justify-center animate-slide-up"
+          style={{ animationDelay: "0.3s" }}
+        >
           <Button
             variant="hero"
             size="lg"

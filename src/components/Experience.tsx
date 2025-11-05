@@ -3,38 +3,48 @@ import { Card } from "@/components/ui/card";
 
 const experiences = [
   {
-    title: "Senior Full Stack Developer",
-    company: "Tech Innovations Inc.",
+    title: "Co-Founder, Fullstack Developer & CTO",
+    company: "DeverCrowd",
+    period: "03/2025 - 10/2025",
+    responsibilities: [
+      "Co-founded the startup and defined the product’s technical roadmap",
+      "Designed and built the backend architecture using Node.js and Express.js",
+      "Implemented secure authentication, authorization, and API protection",
+      "Managed deployments, CI/CD, and cloud infrastructure",
+      "Led the development team and coordinated product delivery",
+    ],
+  },
+  {
+    title: "Backend Developer",
+    company: "Freelance / Personal Projects",
+    period: "2023 - Present",
+    responsibilities: [
+      "Developed full RESTful APIs using Node.js, Express.js, and MongoDB",
+      "Built production-ready authentication systems (JWT, OAuth, sessions)",
+      "Designed database schemas and optimized high-performance queries",
+      "Created full-stack MERN applications with secure backend logic",
+      "Applied security best practices in API design and implementation",
+    ],
+  },
+  {
+    title: "Bug Bounty Hunter & Junior Penetration Tester",
+    company: "HackerOne • BugCrowd",
+    period: "2023 - Present",
+    responsibilities: [
+      "Reported 30+ confirmed vulnerabilities across multiple platforms",
+      "Appeared on multiple Hall of Fame pages on HackerOne & BugCrowd",
+      "Performed testing in web security, authentication, and logic bugs",
+      "Specialized in OWASP Top 10 and modern web exploitation techniques",
+    ],
+  },
+  {
+    title: "CTF Player",
+    company: "Farm CTF • ECPC 2023/2024",
     period: "2022 - Present",
     responsibilities: [
-      "Led development of enterprise-scale web applications using React and Node.js",
-      "Architected microservices infrastructure handling 10M+ daily requests",
-      "Mentored team of 5 junior developers",
-      "Reduced application load time by 60% through optimization",
-      "Implemented CI/CD pipelines improving deployment efficiency",
-    ],
-  },
-  {
-    title: "Frontend Developer",
-    company: "Digital Solutions Ltd.",
-    period: "2020 - 2022",
-    responsibilities: [
-      "Built responsive web applications using React and TypeScript",
-      "Collaborated with UX designers to implement pixel-perfect interfaces",
-      "Integrated RESTful APIs and GraphQL endpoints",
-      "Improved code quality through code reviews and best practices",
-      "Achieved 98% customer satisfaction rate",
-    ],
-  },
-  {
-    title: "Junior Developer",
-    company: "StartUp Ventures",
-    period: "2018 - 2020",
-    responsibilities: [
-      "Developed and maintained web applications using modern JavaScript frameworks",
-      "Participated in agile development processes",
-      "Debugged and resolved production issues",
-      "Contributed to open-source projects",
+      "Competed in CTFs focusing on Web, OSINT, Network, and Forensics",
+      "Developed custom CTF challenge (Farm CTF – Web category)",
+      "Strengthened problem-solving through ECPC participation",
     ],
   },
 ];
@@ -43,8 +53,12 @@ export const Experience = () => {
   return (
     <section id="experience" className="py-20 px-8">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gradient">Experience</h2>
-        <p className="text-muted-foreground mb-12 text-lg">My professional journey</p>
+        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gradient">
+          Experience
+        </h2>
+        <p className="text-muted-foreground mb-12 text-lg">
+          My professional journey
+        </p>
 
         <div className="space-y-6">
           {experiences.map((exp, index) => (
@@ -74,7 +88,10 @@ export const Experience = () => {
 
                   <ul className="space-y-2">
                     {exp.responsibilities.map((resp, idx) => (
-                      <li key={idx} className="flex items-start text-muted-foreground">
+                      <li
+                        key={idx}
+                        className="flex items-start text-muted-foreground"
+                      >
                         <span className="text-primary mr-2 mt-1">▹</span>
                         <span>{resp}</span>
                       </li>

@@ -4,33 +4,13 @@ import { Button } from "@/components/ui/button";
 
 const certifications = [
   {
-    title: "AWS Certified Solutions Architect",
-    issuer: "Amazon Web Services",
+    title: "eLearning Junior Penetration Tester (eJPT)",
+    issuer: "NetRiders",
     date: "2024",
     credential: "AWS-SA-2024-XXX",
     link: "#",
   },
-  {
-    title: "Professional Scrum Master I",
-    issuer: "Scrum.org",
-    date: "2023",
-    credential: "PSM-I-2023-XXX",
-    link: "#",
-  },
-  {
-    title: "React Developer Certification",
-    issuer: "Meta",
-    date: "2023",
-    credential: "META-RD-2023-XXX",
-    link: "#",
-  },
-  {
-    title: "Google Cloud Professional",
-    issuer: "Google Cloud",
-    date: "2022",
-    credential: "GCP-2022-XXX",
-    link: "#",
-  },
+
 ];
 
 export const Certifications = () => {

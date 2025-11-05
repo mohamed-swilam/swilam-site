@@ -3,32 +3,52 @@ import { GraduationCap, Calendar, Clock } from "lucide-react";
 
 const courses = [
   {
-    title: "Advanced React & TypeScript",
-    platform: "Frontend Masters",
+    title: "Web Application Penetration Testing",
+    platform: "PortSwigger Academy",
     date: "2024",
-    duration: "40 hours",
-    description: "Deep dive into React patterns, TypeScript integration, and performance optimization",
+    duration: "40+ hours",
+    description:
+      "Hands-on training covering OWASP Top 10, authentication attacks, access control, and modern web exploitation techniques.",
   },
   {
-    title: "Full Stack Open 2023",
-    platform: "University of Helsinki",
+    title: "Bug Bounty & Web Exploitation",
+    platform: "ZSecurity",
     date: "2023",
-    duration: "60 hours",
-    description: "Comprehensive full-stack development covering React, Node.js, GraphQL, and testing",
+    duration: "20 hours",
+    description:
+      "Practical bug bounty methodologies including recon, automation, and discovering real-world vulnerabilities.",
   },
   {
-    title: "AWS Solutions Architect",
-    platform: "AWS Training",
-    date: "2023",
-    duration: "30 hours",
-    description: "Cloud architecture, scalability, and AWS services best practices",
-  },
-  {
-    title: "System Design & Architecture",
+    title: "MERN Stack Bootcamp",
     platform: "Udemy",
-    date: "2022",
+    date: "2023",
+    duration: "35 hours",
+    description:
+      "Full-stack development with MongoDB, Express, React, and Node.js, including API design and deployment workflows.",
+  },
+  {
+    title: "Advanced Node.js & Express",
+    platform: "Udemy / YouTube",
+    date: "2023",
     duration: "25 hours",
-    description: "Designing scalable systems, microservices architecture, and distributed systems",
+    description:
+      "Advanced backend concepts including authentication, authorization, security best practices, and scalable API architecture.",
+  },
+  {
+    title: "Cyber Security Fundamentals",
+    platform: "EC-Council / YouTube / FreeCodeCamp",
+    date: "2022",
+    duration: "15 hours",
+    description:
+      "Foundations of cybersecurity, networking basics, and security methodologies used in penetration testing.",
+  },
+  {
+    title: "Problem Solving & Algorithms",
+    platform: "Codeforces / ECPC Training",
+    date: "2022 - 2024",
+    duration: "100+ hours",
+    description:
+      "Data structures, dynamic programming, graphs, greedy algorithms, and competitive programming preparation.",
   },
 ];
 
@@ -36,8 +56,12 @@ export const Courses = () => {
   return (
     <section id="courses" className="py-20 px-8 bg-card/30">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gradient">Courses</h2>
-        <p className="text-muted-foreground mb-12 text-lg">Continuous learning journey</p>
+        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gradient">
+          Courses
+        </h2>
+        <p className="text-muted-foreground mb-12 text-lg">
+          Continuous learning journey
+        </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {courses.map((course, index) => (
@@ -56,8 +80,12 @@ export const Courses = () => {
                   <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
                     {course.title}
                   </h3>
-                  <p className="text-primary text-sm font-medium mb-3">{course.platform}</p>
-                  <p className="text-muted-foreground text-sm mb-4">{course.description}</p>
+                  <p className="text-primary text-sm font-medium mb-3">
+                    {course.platform}
+                  </p>
+                  <p className="text-muted-foreground text-sm mb-4">
+                    {course.description}
+                  </p>
 
                   <div className="flex flex-wrap gap-4 text-xs text-muted-foreground">
                     <div className="flex items-center">

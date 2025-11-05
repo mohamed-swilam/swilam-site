@@ -1,5 +1,5 @@
 import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const navItems = [
   { id: "intro", label: "Introduction" },
@@ -13,6 +13,33 @@ const navItems = [
 
 export const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("intro");
+
+  // ✅ Scroll Spy (Detect active section)
+  useEffect(() => {
+    const sections = navItems.map(item =>
+      document.getElementById(item.id)
+    );
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      {
+        threshold: 0.5,
+      }
+    );
+
+    sections.forEach(sec => sec && observer.observe(sec));
+
+    return () => {
+      sections.forEach(sec => sec && observer.unobserve(sec));
+    };
+  }, []);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -50,21 +77,36 @@ export const Sidebar = () => {
         <div className="flex flex-col h-full p-8">
           {/* Logo/Name */}
           <div className="mb-12">
-            <h1 className="text-2xl font-bold text-gradient mb-1">John Doe</h1>
-            <p className="text-muted-foreground text-sm">Full Stack Developer</p>
+            <br /> <br />
+            <h1 className="text-2xl font-bold text-gradient mb-1">{"Swilam"}</h1>
+            <p className="text-muted-foreground text-sm">
+              Security-Focused Full Stack Developer
+            </p>
           </div>
 
           {/* Navigation */}
           <nav className="flex-1 space-y-2">
-            {navItems.map((item) => (
+            {navItems.map(item => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="w-full text-left px-4 py-3 rounded-lg text-foreground/80 hover:text-foreground hover:bg-secondary transition-all duration-200 group"
+                className={`w-full text-left px-4 py-3 rounded-lg transition-all duration-200 group
+                  ${
+                    activeSection === item.id
+                      ? "bg-primary/20 text-primary font-semibold"
+                      : "text-foreground/80 hover:text-foreground hover:bg-secondary"
+                  }
+                `}
               >
                 <span className="relative">
                   {item.label}
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
+
+                  {/* Underline */}
+                  {/* <span
+                    className={`absolute bottom-0 left-0 h-0.5 bg-primary transition-all duration-300 ${
+                      activeSection === item.id ? "w-full" : "w-0 group-hover:w-full"
+                    }`}
+                  /> */}
                 </span>
               </button>
             ))}
@@ -73,7 +115,7 @@ export const Sidebar = () => {
           {/* Footer */}
           <div className="mt-8 pt-8 border-t border-border">
             <p className="text-xs text-muted-foreground">
-              © 2025 John Doe
+              © 2025 Mohamed Hamad
               <br />
               All rights reserved
             </p>

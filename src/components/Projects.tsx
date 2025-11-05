@@ -1,130 +1,257 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
-import { useState } from "react";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+} from "@/components/ui/dialog";
+import { useEffect, useState } from "react";
 import project1 from "@/assets/project1.jpg";
 import project2 from "@/assets/project2.jpg";
 import project3 from "@/assets/project3.jpg";
 
 const projects = [
   {
-    title: "Analytics Dashboard",
-    description: "Real-time analytics platform with interactive charts",
+    title: "DeverCrowd Platform",
+    description:
+      "Full-stack platform with secure authentication and scalable backend",
     image: project1,
-    tags: ["React", "TypeScript", "Chart.js", "Tailwind"],
-    details: "A comprehensive analytics dashboard featuring real-time data visualization, custom chart components, and responsive design. Built with React and TypeScript for type safety and maintainability.",
-    github: "#",
-    demo: "#",
+    tags: ["MERN", "Node.js", "Express", "MongoDB", "JWT", "Tailwind"],
+    details:
+      "A full-stack system featuring secure authentication, user roles, scalable REST APIs, and a responsive frontend. Built with MERN stack and optimized for production-level performance.",
+    github: "https://github.com/DeverCrowd",
+    demo: "https://devercrowd.com",
   },
   {
-    title: "Mobile Commerce App",
-    description: "Modern e-commerce mobile application",
+    title: "Full User Auth Methods API",
+    description: "Authentication system supporting multiple login methods",
     image: project2,
-    tags: ["React Native", "Redux", "Firebase"],
-    details: "Full-featured mobile commerce application with product catalog, shopping cart, payment integration, and user authentication. Optimized for both iOS and Android platforms.",
+    tags: ["Node.js", "Express", "JWT", "OAuth2", "Sessions", "MongoDB"],
+    details:
+      "A complete authentication backend implementing JWT, OAuth2, sessions, cookies, password hashing, and role-based access control. Designed for secure and scalable production use.",
     github: "#",
     demo: "#",
   },
   {
-    title: "Business Intelligence Tool",
-    description: "Data visualization and reporting platform",
+    title: "Events Tracker API",
+    description: "REST API for managing and tracking events",
     image: project3,
-    tags: ["Next.js", "PostgreSQL", "D3.js"],
-    details: "Enterprise-grade business intelligence tool providing advanced data analytics, custom report generation, and interactive visualizations. Handles large datasets with optimized query performance.",
+    tags: ["Node.js", "Express", "MongoDB", "Mongoose"],
+    details:
+      "RESTful API that allows users to create, manage, filter, and track events. Includes secure user access, validation, and optimized database queries for high performance.",
+    github: "#",
+    demo: "#",
+  },
+  {
+    title: "Blog Handler API",
+    description: "Backend for managing posts, categories, and roles",
+    image: project3,
+    tags: ["Node.js", "Express", "MongoDB"],
+    details:
+      "A clean and scalable CRUD backend for blog posts with categories, user permissions, and secure routes. Built with best practices in API design and clean architecture.",
+    github: "#",
+    demo: "#",
+  },
+  {
+    title: "Receipt Management System",
+    description: "Secure backend to store and retrieve receipts",
+    image: project3,
+    tags: ["Node.js", "Express", "Multer", "MongoDB"],
+    details:
+      "A backend service for uploading, organizing, and retrieving receipts with secure file handling and structured data storage.",
+    github: "#",
+    demo: "#",
+  },
+  {
+    title: "Farm CTF Challenge",
+    description: "Custom CTF challenge focused on web exploitation",
+    image: project3,
+    tags: ["Security", "Node.js", "Web Exploitation"],
+    details:
+      "A custom single CTF challenge designed for the Web category, featuring a unique vulnerability, custom logic, and a realistic exploitation path.",
     github: "#",
     demo: "#",
   },
 ];
 
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+
 export const Projects = () => {
-  const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
+  const [selectedProject, setSelectedProject] = useState<
+    (typeof projects)[0] | null
+  >(null);
+
+  const autoplay = Autoplay({ delay: 3500, stopOnInteraction: false });
+
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    {
+      loop: false,
+      align: "start",
+      skipSnaps: false,
+    },
+    // [autoplay]
+  );
+
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
+  // ✅ Handle slide change
+  useEffect(() => {
+    if (!emblaApi) return;
+    const handleSelect = () => setSelectedIndex(emblaApi.selectedScrollSnap());
+    emblaApi.on("select", handleSelect);
+    handleSelect();
+  }, [emblaApi]);
+
+  // ✅ Buttons
+  const scrollPrev = () => emblaApi?.scrollPrev();
+  const scrollNext = () => emblaApi?.scrollNext();
 
   return (
     <section id="projects" className="py-20 px-8 bg-card/30">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gradient">Projects</h2>
-        <p className="text-muted-foreground mb-12 text-lg">Some of my recent work</p>
+        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gradient">
+          Projects
+        </h2>
+        <p className="text-muted-foreground mb-12 text-lg">
+          Some of my recent work
+        </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project, index) => (
-            <Card
-              key={index}
-              className="card-gradient border-border overflow-hidden hover:border-primary/50 transition-all duration-300 hover:shadow-[var(--shadow-card-hover)] group cursor-pointer hover:-translate-y-2"
-              onClick={() => setSelectedProject(project)}
-            >
-              <div className="relative overflow-hidden aspect-video">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-60" />
-              </div>
+        {/* ✅ SLIDER CONTAINER */}
+        <div className="relative">
+          {/* ✅ NEXT / PREV BUTTONS */}
+          <button
+            onClick={scrollPrev}
+            className="absolute -left-4 top-1/2 -translate-y-1/2 z-20 p-2 bg-card border border-border rounded-full shadow hover:bg-secondary transition"
+          >
+            <ChevronLeft className="w-5 h-5" />
+          </button>
 
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
-                  {project.title}
-                </h3>
-                <p className="text-muted-foreground mb-4 text-sm">{project.description}</p>
+          <button
+            onClick={scrollNext}
+            className="absolute -right-4 top-1/2 -translate-y-1/2 z-20 p-2 bg-card border border-border rounded-full shadow hover:bg-secondary transition"
+          >
+            <ChevronRight className="w-5 h-5" />
+          </button>
 
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tags.map((tag, idx) => (
-                    <span
-                      key={idx}
-                      className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full border border-primary/20"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
+          {/* ✅ EMBLA VIEWPORT */}
+          <div className="overflow-hidden" ref={emblaRef}>
+            <div className="flex gap-6">
+              {projects.map((project, index) => (
+                <Card
+                  key={index}
+                  className="
+                    min-w-[300px] md:min-w-[380px] 
+                    card-gradient border-border overflow-hidden 
+                    hover:border-primary/50 transition-all duration-300 
+                    hover:shadow-[var(--shadow-card-hover)] 
+                    group cursor-pointer hover:-translate-y-2
+                  "
+                  onClick={() => setSelectedProject(project)}
+                >
+                  <div className="relative overflow-hidden aspect-video">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-60" />
+                  </div>
 
-                <div className="flex gap-3">
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="flex-1"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      window.open(project.demo, "_blank");
-                    }}
-                  >
-                    <ExternalLink className="w-4 h-4 mr-2" />
-                    View
-                  </Button>
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    className="flex-1"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      window.open(project.github, "_blank");
-                    }}
-                  >
-                    <Github className="w-4 h-4 mr-2" />
-                    Code
-                  </Button>
-                </div>
-              </div>
-            </Card>
-          ))}
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
+                      {project.title}
+                    </h3>
+                    <p className="text-muted-foreground mb-4 text-sm">
+                      {project.description}
+                    </p>
+
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {project.tags.map((tag, idx) => (
+                        <span
+                          key={idx}
+                          className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full border border-primary/20"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+
+                    <div className="flex gap-3">
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="flex-1"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          window.open(project.demo, "_blank");
+                        }}
+                      >
+                        <ExternalLink className="w-4 h-4 mr-2" />
+                        View
+                      </Button>
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        className="flex-1"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          window.open(project.github, "_blank");
+                        }}
+                      >
+                        <Github className="w-4 h-4 mr-2" />
+                        Code
+                      </Button>
+                    </div>
+                  </div>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          {/* ✅ PAGINATION DOTS */}
+          <div className="flex justify-center mt-6 gap-2">
+            {[0,1].map((_, i) => (
+              <button
+                key={i}
+                onClick={() => emblaApi?.scrollTo(i)}
+                className={`
+                  w-3 h-3 rounded-full transition 
+                  ${i === selectedIndex ? "bg-primary" : "bg-primary/30"}
+                `}
+              />
+            ))}
+          </div>
         </div>
       </div>
-
-      {/* Project Details Modal */}
-      <Dialog open={!!selectedProject} onOpenChange={() => setSelectedProject(null)}>
+      {/* ✅ PROJECT MODAL (unchanged) */}
+      <Dialog
+        open={!!selectedProject}
+        onOpenChange={() => setSelectedProject(null)}
+      >
         <DialogContent className="max-w-3xl">
           <DialogHeader>
-            <DialogTitle className="text-2xl">{selectedProject?.title}</DialogTitle>
-            <DialogDescription>{selectedProject?.description}</DialogDescription>
+            <DialogTitle className="text-2xl">
+              {selectedProject?.title}
+            </DialogTitle>
+            <DialogDescription>
+              {selectedProject?.description}
+            </DialogDescription>
           </DialogHeader>
+
           <div className="space-y-6">
             <img
               src={selectedProject?.image}
               alt={selectedProject?.title}
               className="w-full rounded-lg"
             />
+
             <p className="text-foreground/80">{selectedProject?.details}</p>
+
             <div className="flex flex-wrap gap-2">
               {selectedProject?.tags.map((tag, idx) => (
                 <span
@@ -135,12 +262,20 @@ export const Projects = () => {
                 </span>
               ))}
             </div>
+
             <div className="flex gap-4">
-              <Button variant="default" onClick={() => window.open(selectedProject?.demo, "_blank")}>
+              <Button
+                variant="default"
+                onClick={() => window.open(selectedProject?.demo, "_blank")}
+              >
                 <ExternalLink className="w-4 h-4 mr-2" />
                 View Live Demo
               </Button>
-              <Button variant="outline" onClick={() => window.open(selectedProject?.github, "_blank")}>
+
+              <Button
+                variant="outline"
+                onClick={() => window.open(selectedProject?.github, "_blank")}
+              >
                 <Github className="w-4 h-4 mr-2" />
                 View Source Code
               </Button>

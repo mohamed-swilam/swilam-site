@@ -12,20 +12,20 @@ const contactMethods = [
   {
     icon: Linkedin,
     label: "LinkedIn",
-    value: "linkedin.com/in/johndoe",
-    link: "https://linkedin.com/in/johndoe",
+    value: "linkedin.com/in/mohamedhamad1",
+    link: "https://linkedin.com/in/mohamedhamad1",
   },
   {
     icon: Github,
     label: "GitHub",
-    value: "github.com/johndoe",
-    link: "https://github.com/johndoe",
+    value: "github.com/mohamedhamad1",
+    link: "https://github.com/mohamedhamad1",
   },
   {
     icon: Twitter,
     label: "Twitter",
-    value: "@johndoe",
-    link: "https://twitter.com/johndoe",
+    value: "@mohamedhamad1",
+    link: "https://twitter.com/mohamedhamad1",
   },
 ];
 
