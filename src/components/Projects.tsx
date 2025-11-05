@@ -8,7 +8,7 @@ import {
   DialogTitle,
   DialogDescription,
 } from "@/components/ui/dialog";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import project1 from "@/assets/project1.jpg";
 import project2 from "@/assets/project2.jpg";
 import project3 from "@/assets/project3.jpg";
@@ -77,43 +77,14 @@ const projects = [
   },
 ];
 
-import useEmblaCarousel from "embla-carousel-react";
-import Autoplay from "embla-carousel-autoplay";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-
 export const Projects = () => {
   const [selectedProject, setSelectedProject] = useState<
     (typeof projects)[0] | null
   >(null);
 
-  const autoplay = Autoplay({ delay: 3500, stopOnInteraction: false });
-
-  const [emblaRef, emblaApi] = useEmblaCarousel(
-    {
-      loop: false,
-      align: "start",
-      skipSnaps: false,
-    },
-    // [autoplay]
-  );
-
-  const [selectedIndex, setSelectedIndex] = useState(0);
-
-  // ✅ Handle slide change
-  useEffect(() => {
-    if (!emblaApi) return;
-    const handleSelect = () => setSelectedIndex(emblaApi.selectedScrollSnap());
-    emblaApi.on("select", handleSelect);
-    handleSelect();
-  }, [emblaApi]);
-
-  // ✅ Buttons
-  const scrollPrev = () => emblaApi?.scrollPrev();
-  const scrollNext = () => emblaApi?.scrollNext();
-
   return (
     <section id="projects" className="py-20 px-8 bg-card/30">
-      <div className="max-w-sm mx-auto">
+      <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gradient">
           Projects
         </h2>
@@ -121,114 +92,74 @@ export const Projects = () => {
           Some of my recent work
         </p>
 
-        {/* ✅ SLIDER CONTAINER */}
-        <div className="relative">
-          {/* ✅ NEXT / PREV BUTTONS */}
-          <button
-            onClick={scrollPrev}
-            className="absolute -left-4 top-1/2 -translate-y-1/2 z-20 p-2 bg-card border border-border rounded-full shadow hover:bg-secondary transition"
-          >
-            <ChevronLeft className="w-5 h-5" />
-          </button>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {projects.map((project, index) => (
+            <Card
+              key={index}
+              className="card-gradient border-border overflow-hidden hover:border-primary/50 transition-all duration-300 hover:shadow-[var(--shadow-card-hover)] group cursor-pointer hover:-translate-y-2"
+              onClick={() => setSelectedProject(project)}
+            >
+              <div className="relative overflow-hidden aspect-video">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-60" />
+              </div>
 
-          <button
-            onClick={scrollNext}
-            className="absolute -right-4 top-1/2 -translate-y-1/2 z-20 p-2 bg-card border border-border rounded-full shadow hover:bg-secondary transition"
-          >
-            <ChevronRight className="w-5 h-5" />
-          </button>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
+                  {project.title}
+                </h3>
+                <p className="text-muted-foreground mb-4 text-sm">
+                  {project.description}
+                </p>
 
-          {/* ✅ EMBLA VIEWPORT */}
-          <div className="overflow-hidden" ref={emblaRef}>
-            <div className="flex gap-6">
-              {projects.map((project, index) => (
-                <Card
-                  key={index}
-                  className="
-                    min-w-[300px] md:min-w-[380px] 
-                    card-gradient border-border overflow-hidden 
-                    hover:border-primary/50 transition-all duration-300 
-                    hover:shadow-[var(--shadow-card-hover)] 
-                    group cursor-pointer hover:-translate-y-2
-                  "
-                  onClick={() => setSelectedProject(project)}
-                >
-                  <div className="relative overflow-hidden aspect-video">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-60" />
-                  </div>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.tags.map((tag, idx) => (
+                    <span
+                      key={idx}
+                      className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full border border-primary/20"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
 
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
-                      {project.title}
-                    </h3>
-                    <p className="text-muted-foreground mb-4 text-sm">
-                      {project.description}
-                    </p>
-
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {project.tags.map((tag, idx) => (
-                        <span
-                          key={idx}
-                          className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full border border-primary/20"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-
-                    <div className="flex gap-3">
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        className="flex-1"
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          window.open(project.demo, "_blank");
-                        }}
-                      >
-                        <ExternalLink className="w-4 h-4 mr-2" />
-                        View
-                      </Button>
-                      <Button
-                        variant="ghost"
-                        size="sm"
-                        className="flex-1"
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          window.open(project.github, "_blank");
-                        }}
-                      >
-                        <Github className="w-4 h-4 mr-2" />
-                        Code
-                      </Button>
-                    </div>
-                  </div>
-                </Card>
-              ))}
-            </div>
-          </div>
-
-          {/* ✅ PAGINATION DOTS */}
-          <div className="flex justify-center mt-6 gap-2">
-            {[0,1].map((_, i) => (
-              <button
-                key={i}
-                onClick={() => emblaApi?.scrollTo(i)}
-                className={`
-                  w-3 h-3 rounded-full transition 
-                  ${i === selectedIndex ? "bg-primary" : "bg-primary/30"}
-                `}
-              />
-            ))}
-          </div>
+                <div className="flex gap-3">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="flex-1"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      window.open(project.demo, "_blank");
+                    }}
+                  >
+                    <ExternalLink className="w-4 h-4 mr-2" />
+                    View
+                  </Button>
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    className="flex-1"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      window.open(project.github, "_blank");
+                    }}
+                  >
+                    <Github className="w-4 h-4 mr-2" />
+                    Code
+                  </Button>
+                </div>
+              </div>
+            </Card>
+          ))}
         </div>
       </div>
-      {/* ✅ PROJECT MODAL (unchanged) */}
+
+      {/* Project Details Modal */}
       <Dialog
         open={!!selectedProject}
         onOpenChange={() => setSelectedProject(null)}
@@ -242,16 +173,13 @@ export const Projects = () => {
               {selectedProject?.description}
             </DialogDescription>
           </DialogHeader>
-
           <div className="space-y-6">
             <img
               src={selectedProject?.image}
               alt={selectedProject?.title}
               className="w-full rounded-lg"
             />
-
             <p className="text-foreground/80">{selectedProject?.details}</p>
-
             <div className="flex flex-wrap gap-2">
               {selectedProject?.tags.map((tag, idx) => (
                 <span
@@ -262,7 +190,6 @@ export const Projects = () => {
                 </span>
               ))}
             </div>
-
             <div className="flex gap-4">
               <Button
                 variant="default"
@@ -271,7 +198,6 @@ export const Projects = () => {
                 <ExternalLink className="w-4 h-4 mr-2" />
                 View Live Demo
               </Button>
-
               <Button
                 variant="outline"
                 onClick={() => window.open(selectedProject?.github, "_blank")}

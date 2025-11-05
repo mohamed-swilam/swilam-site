@@ -6,19 +6,19 @@ const contactMethods = [
   {
     icon: Mail,
     label: "Email",
-    value: "john.doe@example.com",
-    link: "mailto:john.doe@example.com",
+    value: "swilam.per@gmail.com",
+    link: "mailto:swilam.per@gmail.com",
   },
   {
     icon: Linkedin,
     label: "LinkedIn",
-    value: "linkedin.com/in/mohamedhamad1",
+    value: "@mohamedhamad",
     link: "https://linkedin.com/in/mohamedhamad1",
   },
   {
     icon: Github,
     label: "GitHub",
-    value: "github.com/mohamedhamad1",
+    value: "@mohamedhamad1",
     link: "https://github.com/mohamedhamad1",
   },
   {
