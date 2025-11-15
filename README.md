@@ -1,73 +1,137 @@
-# Welcome to your Lovable project
+<h1 align="center">Hi 👋, I'm Mohamed Hamad Swilam</h1>
+<h3 align="center">Full-Stack & Backend Developer | Junior Penetration Tester | CTF Creator</h3>
 
-## Project info
+---
 
-**URL**: https://lovable.dev/projects/14ba5de4-91a3-4579-82e8-9d1ec4a7590f
+## 👨‍💻 About Me
+A hybrid engineer combining **backend development**, **full-stack engineering**, and **offensive security**.  
+Skilled in building secure, scalable systems and discovering vulnerabilities in real-world web applications.
 
-## How can I edit this code?
+- 🛡️ Junior Pentester with **30+ discovered vulnerabilities**  
+- 🧠 Backend & Full-Stack Developer specializing in **Node.js, MongoDB, and Next.js**  
+- 🚀 Co-founder & CTO of **DeverCrowd**  
+- 🔐 Strong background in API Security, web exploitation, and secure development practices  
+- 🏆 CTF Player & Challenge Creator (Farm CTF)  
+- 🖥️ ECPC problem-solving background  
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## 🛠️ Tech Stack
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/14ba5de4-91a3-4579-82e8-9d1ec4a7590f) and start prompting.
+### 🔧 **Backend**
+- Node.js, Express.js, Mongoose  
+- REST APIs, Authentication, Authorization  
+- JWT, OAuth2, Sessions, Cookies  
+- Clean Architecture, MVC, API Security  
+- Performance Optimization & Deployment
 
-Changes made via Lovable will be committed automatically to this repo.
+### 🧩 **Full-Stack / Frontend**
+- Next.js (App Router)  
+- React Server Components  
+- TailwindCSS, Material UI  
+- Server Actions, API Routes  
+- SEO Optimization & Rendering Strategies
 
-**Use your preferred IDE**
+### 🗄️ **Database**
+- MongoDB (Schema Design, Indexing, Aggregations)  
+- NoSQL Architecture  
+- Secure File Handling
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### 🛡️ **Cybersecurity**
+- Web Security (Server & Client Side)  
+- Authentication & API Security  
+- Reconnaissance, Bug Bounty, POCs  
+- OWASP Top 10  
+- Vulnerability Validation & Report Writing  
+- CTF Skills: Web, OSINT, Network, Forensics
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### 🧰 **Tools**
+- Burp Suite, Nmap, Nikto, Metasploit  
+- Wireshark, Gobuster, Sublist3r  
+- Git, GitHub, Postman  
+- Vercel, Render, Jira, ClickUp  
+- Linux (Kali), Windows
 
-Follow these steps:
+### 🧪 **Scripting & Languages**
+- JavaScript, TypeScript  
+- Python Basics  
+- Bash  
+- C++, HTML, CSS
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 🏗️ Projects
 
-# Step 3: Install the necessary dependencies.
-npm i
+### 🚀 **DeverCrowd — Co-Founder & CTO**
+A production-grade full-stack platform built with:  
+- **Next.js frontend + backend routes**  
+- Custom authentication (JWT, OAuth, Sessions)  
+- Scalable MongoDB schemas  
+- CI/CD, cloud deployments, and app security  
+- Leadership: Managed frontend/backed/UI-UX workflows
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+### 🔐 **Full User Auth Methods**
+Authentication service supporting:  
+- JWT  
+- OAuth 2.0  
+- Sessions  
+- RBAC  
+With a simple UI and secure backend architecture.
 
-**Edit a file directly in GitHub**
+### 📅 **Events Tracker**
+- REST API for events (create/edit/filter)  
+- Secure user access & clean architecture  
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### ✍️ **Blog Handler**
+- CRUD posts, categories, roles  
+- Scalable backend + simple UI  
 
-**Use GitHub Codespaces**
+### 🧾 **Receipt Management**
+- Upload/organize/retrieve receipts  
+- Secure backend logic & file handling  
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### 🧬 **Farm CTF**
+A custom web-exploitation challenge with environment + full solution path.
 
-## What technologies are used for this project?
+---
 
-This project is built with:
+## 🏆 Cybersecurity Achievements
+- Listed in **Bug Bounty Hall of Fames**  
+  *(ClassDojo, Daimler Truck, ION Group, etc.)*  
+- 30+ vulnerabilities reported with high-quality POCs  
+- Designed and hosted CTF challenges  
+- Experienced in recon automation, payload crafting, impact analysis  
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+---
 
-## How can I deploy this project?
+## 🎓 Education & Certifications
+- **B.Sc. Computer Science (2022–2026)**  
+- **CompTIA**  
+  - Linux+  
+  - Network+  
+  - Security+ (Awareness)  
+- **eLearnSecurity**  
+  - eJPT  
+  - eWAPT  
+  - eWAPTX *(in progress)*  
 
-Simply open [Lovable](https://lovable.dev/projects/14ba5de4-91a3-4579-82e8-9d1ec4a7590f) and click on Share -> Publish.
+---
 
-## Can I connect a custom domain to my Lovable project?
+## 📊 GitHub Stats
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=mohamed-swilam&show_icons=true&theme=tokyonight" />
+  <br/>
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=mohamed-swilam&theme=tokyonight" />
+  <br/>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=mohamed-swilam&layout=compact&theme=tokyonight" />
+</p>
 
-Yes, you can!
+---
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 📫 Contact
+- **Email:** swilam.per@gmail.com  
+- **GitHub:** github.com/mohamed-swilam
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+---
+
+> ⚡ *From secure systems to exploited systems — I build it, break it, and secure it again.*
