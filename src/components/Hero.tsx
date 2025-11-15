@@ -64,30 +64,30 @@ export const Hero = () => {
 
         {/* CTA Buttons */}
         <div
-          className="flex flex-wrap gap-4 justify-center animate-slide-up"
+          className="flex flex-col items-center gap-4 justify-center animate-slide-up"
           style={{ animationDelay: "0.3s" }}
         >
-          <Button
+          {/* <Button
             variant="hero"
             size="lg"
             onClick={() => scrollToSection("projects")}
           >
             View Projects
-          </Button>
-          <Button variant="outline" size="lg">
+          </Button> */}
+          {/* <Button variant="outline" size="lg">
             <Download className="mr-2 h-4 w-4" />
-            Download CV
-          </Button>
-        </div>
+            CV
+          </Button> */}
 
-        {/* Scroll Indicator */}
-        <button
-          onClick={() => scrollToSection("experience")}
-          className="absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce"
-          aria-label="Scroll to next section"
-        >
-          <ChevronDown className="w-8 h-8 text-primary" />
-        </button>
+          {/* Scroll Indicator */}
+          <button
+            onClick={() => scrollToSection("experience")}
+            className="animate-bounce"
+            aria-label="Scroll to next section"
+          >
+            <ChevronDown className="w-8 h-8 text-primary" />
+          </button>
+        </div>
       </div>
     </section>
   );

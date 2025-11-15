@@ -22,7 +22,7 @@ const projects = [
     tags: ["MERN", "Node.js", "Express", "MongoDB", "JWT", "Tailwind"],
     details:
       "A full-stack system featuring secure authentication, user roles, scalable REST APIs, and a responsive frontend. Built with MERN stack and optimized for production-level performance.",
-    github: "https://github.com/DeverCrowd",
+    github: "https://github.com/DeverCrowd/UpdatedDeverCrowd",
     demo: "https://devercrowd.com",
   },
   {
@@ -32,7 +32,7 @@ const projects = [
     tags: ["Node.js", "Express", "JWT", "OAuth2", "Sessions", "MongoDB"],
     details:
       "A complete authentication backend implementing JWT, OAuth2, sessions, cookies, password hashing, and role-based access control. Designed for secure and scalable production use.",
-    github: "#",
+    github: "https://github.com/mohamed-swilam/userAuths",
     demo: "#",
   },
   {
@@ -42,7 +42,7 @@ const projects = [
     tags: ["Node.js", "Express", "MongoDB", "Mongoose"],
     details:
       "RESTful API that allows users to create, manage, filter, and track events. Includes secure user access, validation, and optimized database queries for high performance.",
-    github: "#",
+    github: "https://github.com/mohamed-swilam/events",
     demo: "#",
   },
   {
@@ -52,7 +52,7 @@ const projects = [
     tags: ["Node.js", "Express", "MongoDB"],
     details:
       "A clean and scalable CRUD backend for blog posts with categories, user permissions, and secure routes. Built with best practices in API design and clean architecture.",
-    github: "#",
+    github: "https://github.com/mohamedhamad1/blog",
     demo: "#",
   },
   {
@@ -62,7 +62,7 @@ const projects = [
     tags: ["Node.js", "Express", "Multer", "MongoDB"],
     details:
       "A backend service for uploading, organizing, and retrieving receipts with secure file handling and structured data storage.",
-    github: "#",
+    github: "https://github.com/mohamed-swilam/Receipt-Management",
     demo: "#",
   },
   {
@@ -72,7 +72,7 @@ const projects = [
     tags: ["Security", "Node.js", "Web Exploitation"],
     details:
       "A custom single CTF challenge designed for the Web category, featuring a unique vulnerability, custom logic, and a realistic exploitation path.",
-    github: "#",
+    github: "https://github.com/mohamed-swilam/dontexpectit",
     demo: "#",
   },
 ];

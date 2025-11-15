@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Mail, Linkedin, Github, Twitter } from "lucide-react";
+import { Mail, Linkedin, Github, Twitter, Facebook } from "lucide-react";
 
 const contactMethods = [
   {
@@ -12,20 +12,20 @@ const contactMethods = [
   {
     icon: Linkedin,
     label: "LinkedIn",
-    value: "@mohamedhamad",
-    link: "https://linkedin.com/in/mohamedhamad1",
+    value: "Mohamed Swilam",
+    link: "https://www.linkedin.com/in/mohamed-swilam-581920391",
   },
   {
     icon: Github,
     label: "GitHub",
-    value: "@mohamedhamad1",
-    link: "https://github.com/mohamedhamad1",
+    value: "Mohamed Swilam",
+    link: "https://github.com/mohamed-swilam",
   },
   {
-    icon: Twitter,
-    label: "Twitter",
-    value: "@mohamedhamad1",
-    link: "https://twitter.com/mohamedhamad1",
+    icon: Facebook,
+    label: "Facebook",
+    value: "Mohamed Hamad",
+    link: "https://www.facebook.com/swilam2752003",
   },
 ];
 
