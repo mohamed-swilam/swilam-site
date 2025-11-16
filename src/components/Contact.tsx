@@ -71,7 +71,7 @@ export const Contact = () => {
             <Button
               variant="hero"
               size="lg"
-              onClick={() => window.open("mailto:john.doe@example.com")}
+              onClick={() => window.open("mailto:swilam.per@gmail.com")}
             >
               <Mail className="mr-2 h-5 w-5" />
               Send Email

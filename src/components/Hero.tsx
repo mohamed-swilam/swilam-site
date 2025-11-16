@@ -32,7 +32,7 @@ export const Hero = () => {
       <div className="relative z-10 max-w-4xl mx-auto px-8 text-center animate-fade-in">
         {/* Profile Picture */}
         <div className="mb-8 animate-scale-in">
-          <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-primary to-cyan-400 p-1">
+          <div className="lg:w-64 lg:h-64 w-48 h-48 mx-auto rounded-full bg-gradient-to-br from-primary to-cyan-400 p-1">
             <div className="w-full h-full rounded-full bg-card flex items-center justify-center">
               <img
                 src="/profile.jpg"
