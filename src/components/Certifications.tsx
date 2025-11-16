@@ -13,7 +13,7 @@ const certifications = [
 
 ];
 
-export const Certifications = () => {
+export const Certifications = () => { 
   return (
     <section id="certifications" className="py-20 px-8">
       <div className="max-w-6xl mx-auto">
