@@ -93,7 +93,7 @@ export const Projects = () => {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project, index) => (
+          {projects.map((project, index) => ( 
             <Card
               key={index}
               className="card-gradient border-border overflow-hidden hover:border-primary/50 transition-all duration-300 hover:shadow-[var(--shadow-card-hover)] group cursor-pointer hover:-translate-y-2"
