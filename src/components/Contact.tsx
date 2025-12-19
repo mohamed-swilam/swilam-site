@@ -13,7 +13,7 @@ const contactMethods = [
     icon: Linkedin,
     label: "LinkedIn",
     value: "Mohamed Swilam",
-    link: "https://www.linkedin.com/in/mohamed-swilam-581920391",
+    link: "https://www.linkedin.com/in/swilam-dev",
   },
   {
     icon: Github,

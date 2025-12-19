@@ -3,23 +3,24 @@ import { useState } from "react";
 
 const skillCategories = [
   {
-    category: "Frontend",
-    skills: [
-      { name: "React.js", level: 85 },
-      { name: "Next.js", level: 80 },
-      { name: "JavaScript (ES6+)", level: 88 },
-      { name: "HTML & CSS", level: 90 },
-      { name: "Tailwind CSS", level: 85 },
-    ],
-  },
-  {
     category: "Backend",
     skills: [
       { name: "Node.js", level: 90 },
       { name: "Express.js", level: 88 },
+      { name: "Nest.js", level: 88 },
       { name: "MongoDB / Mongoose", level: 85 },
-      { name: "RESTful APIs", level: 92 },
-      { name: "Authentication (JWT, OAuth2, Sessions)", level: 90 },
+      { name: "MySQL / MS MySql", level: 85 },
+
+    ],
+  },
+  {
+    category: "Frontend",
+    skills: [
+      { name: "React.js", level: 95 },
+      { name: "Next.js", level: 85 },
+      { name: "JavaScript (ES6+)", level: 99 },
+      { name: "HTML & CSS", level: 99 },
+      { name: "Tailwind CSS", level: 99 },
     ],
   },
   {
