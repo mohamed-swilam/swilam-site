@@ -31,25 +31,25 @@ const projects = [
     description:
       "A cybersecurity-focused email platform with real-time threat detection.",
     image: project2,
-    tags: ["Node.js", "NestJS", "JWT", "OAuth2", "Sessions", "MySQL"],
+    tags: ["Node.js", "NestJS", "PostgreSQL", "JWT", "OAuth2","IMAP / SMTP"],
     details:
       "Developed a secure email client that integrates real-time cybersecurity scanning to detect phishing attempts, malicious attachments, and suspicious links. Implemented strong authentication using JWT, OAuth2, and session management, along with an admin dashboard for monitoring users, emails, and security alerts.",
-    github: "#",
+    github: "https://github.com/The-Team-Dream/SecureMail",
     demo: "",
     underDev: true,
   },
-  {
-    title: "Swichat",
-    description:
-      "A real-time chat application with stories similar to WhatsApp.",
-    image: project3,
-    tags: ["Node.js", "Express", "MongoDB", "Mongoose", "Socket.IO"],
-    details:
-      "Built a real-time chat platform that allows users to exchange messages instantly using WebSockets. The application includes a stories feature similar to WhatsApp, where users can upload images or videos that expire after 24 hours. Implemented user authentication, chat privacy, and scalable data handling using MongoDB and Mongoose.",
-    github: "https://github.com/mohamed-swilam/Swichat",
-    demo: "",
-    underDev: true,
-  },
+  // {
+  //   title: "Swichat",
+  //   description:
+  //     "A real-time chat application with stories similar to WhatsApp.",
+  //   image: project3,
+  //   tags: ["Node.js", "Express", "MongoDB", "Mongoose", "Socket.IO"],
+  //   details:
+  //     "Built a real-time chat platform that allows users to exchange messages instantly using WebSockets. The application includes a stories feature similar to WhatsApp, where users can upload images or videos that expire after 24 hours. Implemented user authentication, chat privacy, and scalable data handling using MongoDB and Mongoose.",
+  //   github: "https://github.com/mohamed-swilam/Swichat",
+  //   demo: "",
+  //   underDev: true,
+  // },
 ];
 
 export const Projects = () => {
@@ -130,7 +130,7 @@ export const Projects = () => {
                       <Github className="w-4 h-4 mr-2" />
                       Code
                       {project.underDev && (
-                        <p className="text-gray-500">Under Development</p>
+                    <p className="text-gray-500 text-xs">{"(Under Development)"}</p>
                       )}
                     </Button>
                   )}
@@ -198,7 +198,7 @@ export const Projects = () => {
                   <Github className="w-4 h-4 mr-2" />
                   Code
                   {selectedProject?.underDev && (
-                    <p className="text-gray-500">Under Development</p>
+                    <p className="text-gray-500 text-xs">{"(Under Development)"}</p>
                   )}
                 </Button>
               )}

@@ -3,7 +3,7 @@ import { Card } from "@/components/ui/card";
 
 const experiences = [
   {
-    title: "Co-Founder, Fullstack Developer & CTO",
+    title: "Co-Founder, Fullstack Developer",
     company: "DeverCrowd",
     period: "03/2025 - 10/2025",
     responsibilities: [
@@ -15,38 +15,41 @@ const experiences = [
     ],
   },
   {
-    title: "Backend Developer",
+    title: "Full-Stack Developer",
     company: "Freelance / Personal Projects",
     period: "2023 - Present",
     responsibilities: [
-      "Developed full RESTful APIs using Node.js, Express.js, and MongoDB",
-      "Built production-ready authentication systems (JWT, OAuth, sessions)",
-      "Designed database schemas and optimized high-performance queries",
-      "Created full-stack MERN applications with secure backend logic",
-      "Applied security best practices in API design and implementation",
+      "Developed full-stack applications using React, Next.js, Node.js, and Express",
+      "Built and integrated RESTful APIs with secure authentication (JWT, OAuth)",
+      "Designed and optimized MongoDB and SQL databases",
+      "Created responsive UIs with Tailwind CSS",
+      "Applied security best practices and deployed applications to production",
     ],
   },
+
   {
-    title: "Bug Bounty Hunter & Junior Penetration Tester",
-    company: "HackerOne • BugCrowd",
-    period: "2023 - Present",
-    responsibilities: [
-      "Reported 30+ confirmed vulnerabilities across multiple platforms",
-      "Appeared on multiple Hall of Fame pages on HackerOne & BugCrowd",
-      "Performed testing in web security, authentication, and logic bugs",
-      "Specialized in OWASP Top 10 and modern web exploitation techniques",
-    ],
-  },
-  {
-    title: "CTF Player",
-    company: "Farm CTF • ECPC 2023/2024",
-    period: "2022 - Present",
-    responsibilities: [
-      "Competed in CTFs focusing on Web, OSINT, Network, and Forensics",
-      "Developed custom CTF challenge (Farm CTF – Web category)",
-      "Strengthened problem-solving through ECPC participation",
-    ],
-  },
+  title: "Bug Bounty Hunter & CTF Player",
+  company: "HackerOne • Bugcrowd",
+  period: "2023 - Present",
+  responsibilities: [
+    "Reported 30+ validated vulnerabilities across multiple platforms",
+    "Listed on Hall of Fame pages on HackerOne and Bugcrowd",
+    "Specialized in OWASP Top 10 and modern web exploitation",
+    "Participated in CTF competitions (Web, OSINT, Network, Forensics)",
+    "Developed custom Web challenge (Farm CTF)"
+  ],
+},
+{
+  title: "Competitive Programming Participant",
+  company: "ECPC / ICPC Community",
+  period: "2022 - Present",
+  responsibilities: [
+    "Participated in ECPC qualifiers and local ICPC contests",
+    "Ranked 3rd in ICPC Obour Community contest",
+    "Strengthened problem-solving and data structure skills"
+  ],
+},
+
 ];
 
 export const Experience = () => {

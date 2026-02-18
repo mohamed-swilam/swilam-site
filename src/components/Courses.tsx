@@ -3,52 +3,39 @@ import { GraduationCap, Calendar, Clock } from "lucide-react";
 
 const courses = [
   {
-    title: "Web Application Penetration Testing",
-    platform: "PortSwigger Academy",
+    title: "Mern Stack Developer",
+    platform: "MaharaTech",
+    date: "2023",
+    description:
+      "Learned backend fundamentals including RESTful APIs, authentication, database integration, and backend architecture principles.",
+  },
+  {
+    title: "Advanced Full-Stack Concepts (Self-Study)",
+    platform: "Online Technical Resources",
+    date: "2023",
+    description:
+      "Studied advanced authentication patterns, API security, scalable architecture, and performance optimization through curated technical content and practical implementation.",
+  },
+  {
+    title: "Web Application Security & OWASP Top 10",
+    platform: "PortSwigger Web Security Academy",
     date: "2024",
-    duration: "40+ hours",
     description:
-      "Hands-on training covering OWASP Top 10, authentication attacks, access control, and modern web exploitation techniques.",
+      "Completed hands-on labs covering XSS, SQL Injection, authentication flaws, access control, SSRF, and modern web exploitation techniques.",
   },
   {
-    title: "Bug Bounty & Web Exploitation",
-    platform: "ZSecurity",
+    title: "eJPTv1 Prep",
+    platform: "Netriders Academy",
     date: "2023",
-    duration: "20 hours",
     description:
-      "Practical bug bounty methodologies including recon, automation, and discovering real-world vulnerabilities.",
+      "Learned practical bug bounty methodologies including reconnaissance, automation, vulnerability discovery, and real-world exploitation techniques.",
   },
   {
-    title: "MERN Stack Bootcamp",
-    platform: "Udemy",
-    date: "2023",
-    duration: "35 hours",
-    description:
-      "Full-stack development with MongoDB, Express, React, and Node.js, including API design and deployment workflows.",
-  },
-  {
-    title: "Advanced Node.js & Express",
-    platform: "Udemy / YouTube",
-    date: "2023",
-    duration: "25 hours",
-    description:
-      "Advanced backend concepts including authentication, authorization, security best practices, and scalable API architecture.",
-  },
-  {
-    title: "Cyber Security Fundamentals",
-    platform: "EC-Council / YouTube / FreeCodeCamp",
-    date: "2022",
-    duration: "15 hours",
-    description:
-      "Foundations of cybersecurity, networking basics, and security methodologies used in penetration testing.",
-  },
-  {
-    title: "Problem Solving & Algorithms",
+    title: "Data Structures & Algorithms",
     platform: "Codeforces / ECPC Training",
     date: "2022 - 2024",
-    duration: "100+ hours",
     description:
-      "Data structures, dynamic programming, graphs, greedy algorithms, and competitive programming preparation.",
+      "Practiced problem solving, dynamic programming, graphs, greedy algorithms, and competitive programming techniques.",
   },
 ];
 
@@ -94,7 +81,7 @@ export const Courses = () => {
                     </div>
                     <div className="flex items-center">
                       <Clock className="w-4 h-4 mr-1.5" />
-                      {course.duration}
+                      {course.date}
                     </div>
                   </div>
                 </div>

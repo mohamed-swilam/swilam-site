@@ -5,45 +5,67 @@ const skillCategories = [
   {
     category: "Backend",
     skills: [
-      { name: "Node.js", level: 90 },
-      { name: "Express.js", level: 88 },
-      { name: "Nest.js", level: 88 },
-      { name: "MongoDB / Mongoose", level: 85 },
-      { name: "MySQL / MS MySql", level: 85 },
-
+      { name: "Node.js" },
+      { name: "Express.js" },
+      { name: "Nest.js" },
+      { name: "PostgreSQL" },
+      { name: "Prisma" },
+      { name: "MongoDB" },
+      { name: "Mongoose" },
+      { name: "MySQL" },
+      { name: "TypeORM" },
+      { name: "Redis" },           
+      { name: "Socket.IO" },       
+      { name: "RabbitMQ" },        
     ],
   },
   {
     category: "Frontend",
     skills: [
-      { name: "React.js", level: 95 },
-      { name: "Next.js", level: 85 },
-      { name: "JavaScript (ES6+)", level: 99 },
-      { name: "HTML & CSS", level: 99 },
-      { name: "Tailwind CSS", level: 99 },
+      { name: "React.js" },
+      { name: "Next.js" },
+      { name: "JavaScript (ES6+)" },
+      { name: "HTML & CSS" },
+      { name: "Tailwind CSS" },
+      { name: "TypeScript" },       
+      { name: "Redux / Zustand" },  
     ],
   },
   {
     category: "Cyber Security",
     skills: [
-      { name: "Web Penetration Testing", level: 80 },
-      { name: "Bug Bounty Hunting", level: 78 },
-      { name: "OWASP Top 10", level: 85 },
-      { name: "CTF (Web, OSINT, Forensics, Network)", level: 75 },
-      { name: "Burp Suite", level: 82 },
+      { name: "CTF (Web, OSINT, Forensics, Network)" },
+      { name: "Web & Network Penetration Testing" },
+      { name: "Bug Bounty Hunting" },
+      { name: "OWASP Top 10" },
+      { name: "Burp Suite" },
+      { name: "Wireshark" },
+      { name: "Metasploit Basics" },
     ],
   },
   {
-    category: "Tools & Others",
+    category: "Cloud & DevOps",
     skills: [
-      { name: "Git & GitHub", level: 90 },
-      { name: "Linux Basics", level: 75 },
-      { name: "Postman", level: 88 },
-      { name: "Docker (Basics)", level: 60 },
-      { name: "Problem Solving", level: 80 },
+      { name: "Docker" },
+      // { name: "Kubernetes Basics" },
+      { name: "AWS / Azure / GCP Basics" },
+      { name: "CI/CD Pipelines" },
+      { name: "Linux Advanced Commands" },
+      { name: "Postman" },
+      { name: "Git & GitHub" },
+    ],
+  },
+  {
+    category: "Soft / Problem Solving",
+    skills: [
+      { name: "ECPC Participant" },
+      { name: "Team Collaboration and Leading" },
+      { name: "Agile / Scrum Basics" },
+      { name: "Time Management" },
     ],
   },
 ];
+
 
 export const Skills = () => {
   const [hoveredSkill, setHoveredSkill] = useState<string | null>(null);
@@ -67,36 +89,14 @@ export const Skills = () => {
               <h3 className="text-xl font-semibold mb-6 text-primary">
                 {category.category}
               </h3>
-              <div className="space-y-4">
+              <div className="flex flex-wrap gap-2 mb-4">
                 {category.skills.map((skill, idx) => (
-                  <div
+                  <span
                     key={idx}
-                    className="group"
-                    onMouseEnter={() => setHoveredSkill(skill.name)}
-                    onMouseLeave={() => setHoveredSkill(null)}
+                    className="px-3 py-1 bg-primary/5 text-primary text-xs rounded-full border border-primary/20 hover:bg-primary/40 duration-300"
                   >
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">
-                        {skill.name}
-                      </span>
-                      {hoveredSkill === skill.name && (
-                        <span className="text-xs text-primary font-semibold animate-fade-in">
-                          {skill.level}%
-                        </span>
-                      )}
-                    </div>
-                    <div className="h-2 bg-secondary rounded-full overflow-hidden">
-                      <div
-                        className="h-full bg-gradient-to-r from-primary to-cyan-400 rounded-full transition-all duration-500 group-hover:shadow-lg group-hover:shadow-primary/50"
-                        style={{
-                          width:
-                            hoveredSkill === skill.name
-                              ? `${skill.level}%`
-                              : "0%",
-                        }}
-                      />
-                    </div>
-                  </div>
+                    {skill.name}
+                  </span>
                 ))}
               </div>
             </Card>

@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Mail, Linkedin, Github, Twitter, Facebook } from "lucide-react";
+import { Mail, Linkedin, Github, Facebook, Instagram,MessageCircle  } from "lucide-react";
 
 const contactMethods = [
   {
@@ -26,6 +26,12 @@ const contactMethods = [
     label: "Facebook",
     value: "Mohamed Hamad",
     link: "https://www.facebook.com/swilam2752003",
+  },
+  {
+    icon: MessageCircle,
+    label: "WhatsApp",
+    value: "+201030141149",
+    link: "https://api.whatsapp.com/send?phone=201030141149",
   },
 ];
 

@@ -43,7 +43,7 @@ export const Certifications = () => {
                       Issued: {cert.date}
                     </p>
                     <p className="text-muted-foreground text-xs mb-3">
-                      Credential ID: {cert.credential}
+                      {/* Credential ID: {cert.credential} */}
                     </p>
                     <Button
                       variant="ghost"
