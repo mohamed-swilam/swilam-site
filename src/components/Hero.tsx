@@ -49,7 +49,7 @@ export const Hero = () => {
           <span className="text-gradient">Mohamed Hamad</span>
         </h1>
         <h2 className="text-lg md:text-xl text-foreground/80 mb-4 animate-slide-up">
-          Backend Engineer | Security-Oriented
+          Node.js Backend Engineer | Security-Oriented
         </h2>
         <p
           className="text-sm text-muted-foreground max-w-2xl mb-6 leading-relaxed animate-slide-up"
