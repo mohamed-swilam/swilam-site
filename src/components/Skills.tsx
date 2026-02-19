@@ -84,14 +84,14 @@ export const Skills = () => {
               key={index}
               className="card-gradient border-border p-6 hover:border-primary/50 transition-all duration-300"
             >
-              <h3 className="text-xl font-semibold mb-6 text-primary">
+              <h3 className="text-xl font-semibold mb-6 text-primary border-b pb-1 ">
                 {category.category}
               </h3>
               <div className="flex flex-wrap gap-2 mb-4">
                 {category.skills.map((skill, idx) => (
                   <span
                     key={idx}
-                    className="px-3 py-1 bg-primary/5 text-primary text-xs rounded-full border border-primary/20 hover:bg-primary/40 duration-300"
+                    className="px-3 py-1 bg-primary/5 text-primary text-xs rounded-full border border-primary/5 hover:bg-primary/40 duration-300"
                   >
                     {skill.name}
                   </span>
