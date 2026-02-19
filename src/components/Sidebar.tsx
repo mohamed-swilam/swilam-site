@@ -80,7 +80,7 @@ export const Sidebar = () => {
             <br /> <br />
             <h1 className="text-2xl font-bold text-gradient mb-1">{"Swilam"}</h1>
             <p className="text-muted-foreground text-sm">
-              Security-Focused Full Stack Developer
+              Backend Engineer | Security-Oriented
             </p>
           </div>
 
