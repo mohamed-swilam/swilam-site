@@ -76,7 +76,7 @@ export const Hero = () => {
             View Projects
           </Button>
           <a
-            href="https://drive.google.com/file/d/15Wuyn7YrnwOeYC7DPE7bJQJ40l2misE_/view"
+            href="https://drive.google.com/file/d/1f-DqKiyKTZKc4ngxtzkav_afGDpW4nuv/view"
             className="inline-flex items-center justify-center px-4 py-2 rounded-md font-medium border border-primary/50  hover:bg-primary/10 hover:border-primary transition-all duration-300"
             target="_blank" rel="noopener" download
           >
