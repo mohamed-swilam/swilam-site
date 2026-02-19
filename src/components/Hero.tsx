@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Download, ChevronDown } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
+import cv from "@/assets/mohamed.hamad_Backend.pdf"
 
 export const Hero = () => {
   const scrollToSection = (id: string) => {
@@ -44,17 +45,14 @@ export const Hero = () => {
         </div>
 
         {/* Text Content */}
-        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 animate-slide-up">
+        <h1 className="text-4xl md:text-5xl mb-4 font-bold animate-slide-up">
           <span className="text-gradient">Mohamed Hamad</span>
         </h1>
-        <h2
-          className="text-2xl md:text-3xl text-foreground/80 mb-6 animate-slide-up"
-          style={{ animationDelay: "0.1s" }}
-        >
+        <h2 className="text-lg md:text-xl text-foreground/80 mb-4 animate-slide-up">
           Backend Engineer | Security-Oriented
         </h2>
         <p
-          className="text-lg text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed animate-slide-up"
+          className="text-sm text-muted-foreground max-w-2xl mb-6 leading-relaxed animate-slide-up"
           style={{ animationDelay: "0.2s" }}
         >
           Backend engineer focused on building secure, scalable, and
@@ -70,17 +68,21 @@ export const Hero = () => {
           className="flex flex-col items-center gap-4 justify-center animate-slide-up"
           style={{ animationDelay: "0.3s" }}
         >
-          {/* <Button
+          <Button
             variant="hero"
             size="lg"
             onClick={() => scrollToSection("projects")}
           >
             View Projects
-          </Button> */}
-          {/* <Button variant="outline" size="lg">
+          </Button>
+          <a
+            href="/mohamed.hamad_Backend.pdf"
+            className="inline-flex items-center justify-center px-4 py-2 rounded-md font-medium border border-primary/50  hover:bg-primary/10 hover:border-primary transition-all duration-300"
+            target="_blank" rel="noopener" download
+          >
             <Download className="mr-2 h-4 w-4" />
             CV
-          </Button> */}
+          </a>
 
           {/* Scroll Indicator */}
           <button
