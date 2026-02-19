@@ -3,18 +3,18 @@ import { GraduationCap, Calendar, Clock } from "lucide-react";
 
 const courses = [
   {
-    title: "Mern Stack Developer",
+    title: "Backend & Security Fundamentals",
     platform: "MaharaTech",
     date: "2023",
     description:
       "Learned backend fundamentals including RESTful APIs, authentication, database integration, and backend architecture principles.",
   },
   {
-    title: "Advanced Full-Stack Concepts (Self-Study)",
+    title: "Advanced Backend & Security Concepts (Self-Study)",
     platform: "Online Technical Resources",
     date: "2023",
     description:
-      "Studied advanced authentication patterns, API security, scalable architecture, and performance optimization through curated technical content and practical implementation.",
+      "Studied advanced authentication patterns, API security, scalable architecture, caching strategies, and performance optimization, Implemented secure, maintainable backend systems through curated online resources and practical projects",
   },
   {
     title: "Web Application Security & OWASP Top 10",

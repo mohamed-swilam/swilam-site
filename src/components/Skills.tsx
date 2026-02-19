@@ -16,7 +16,6 @@ const skillCategories = [
       { name: "TypeORM" },
       { name: "Redis" },           
       { name: "Socket.IO" },       
-      { name: "RabbitMQ" },        
     ],
   },
   {
@@ -28,7 +27,6 @@ const skillCategories = [
       { name: "HTML & CSS" },
       { name: "Tailwind CSS" },
       { name: "TypeScript" },       
-      { name: "Redux / Zustand" },  
     ],
   },
   {
@@ -48,7 +46,7 @@ const skillCategories = [
     skills: [
       { name: "Docker" },
       // { name: "Kubernetes Basics" },
-      { name: "AWS / Azure / GCP Basics" },
+      { name: "Cloudinary" },
       { name: "CI/CD Pipelines" },
       { name: "Linux Advanced Commands" },
       { name: "Postman" },

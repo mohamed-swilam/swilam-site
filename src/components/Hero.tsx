@@ -51,15 +51,18 @@ export const Hero = () => {
           className="text-2xl md:text-3xl text-foreground/80 mb-6 animate-slide-up"
           style={{ animationDelay: "0.1s" }}
         >
-          Security-Focused Full Stack Developer
+          Backend Engineer | Security-Oriented
         </h2>
         <p
           className="text-lg text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed animate-slide-up"
           style={{ animationDelay: "0.2s" }}
         >
-          Full-stack and security-focused engineer specializing in backend
-          development, penetration testing, and building reliable systems with
-          best-practice security and clean architecture.
+          Backend engineer focused on building secure, scalable, and
+          high-performance systems using modern backend technologies.
+          Experienced in API security, authentication mechanisms, database
+          design, and system reliability. Competitive programming background
+          with strong problem-solving skills. Comfortable working across the
+          stack when required.
         </p>
 
         {/* CTA Buttons */}

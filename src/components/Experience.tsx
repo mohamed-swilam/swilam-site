@@ -3,7 +3,7 @@ import { Card } from "@/components/ui/card";
 
 const experiences = [
   {
-    title: "Co-Founder, Fullstack Developer",
+    title: "Backend Developer & Co-Founder",
     company: "DeverCrowd",
     period: "03/2025 - 10/2025",
     responsibilities: [
@@ -15,15 +15,15 @@ const experiences = [
     ],
   },
   {
-    title: "Full-Stack Developer",
+    title: "Backend Developer",
     company: "Freelance / Personal Projects",
     period: "2023 - Present",
     responsibilities: [
-      "Developed full-stack applications using React, Next.js, Node.js, and Express",
-      "Built and integrated RESTful APIs with secure authentication (JWT, OAuth)",
-      "Designed and optimized MongoDB and SQL databases",
-      "Created responsive UIs with Tailwind CSS",
-      "Applied security best practices and deployed applications to production",
+      "Developed backend systems and RESTful APIs with secure authentication (JWT, OAuth)",
+      "Designed and optimized database schemas for SQL and NoSQL databases",
+      "Applied backend security best practices and performance optimizations",
+      "Integrated backend services with frontend apps (React, Next.js) for full-stack collaboration",
+      "Deployed applications to production using CI/CD pipelines and cloud infrastructure",
     ],
   },
 
